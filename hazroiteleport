@@ -1,3 +1,5 @@
+-- UI Library
+
 local Library = {
     Source = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/UI-Libraries/main/Vynixius/Source.lua"))(),
     Items = {},
@@ -13,7 +15,7 @@ local Window = Library.Source:AddWindow({
 })
 
 local Tab = Window:AddTab("Teleport Tool", {default = true})
-local SettingsTab = Window:AddTab("Ayarlar")
+local SettingsTab = Window:AddTab("Settings")
 
 -- Services
 
@@ -32,15 +34,15 @@ local Points = {}
 -- Modules
 
 local SelfModules = {
-	Directory = "xHazroi9x",
-    Discord = "xHazroi9x",
-    Inviter = "xHazroi9x",
+	Directory = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Directory.lua"))(),
+    Discord = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Discord.lua"))(),
+    Inviter = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))(),
 }
 
 -- Directory
 
 local Directory = SelfModules.Directory.Create({
-	["xHazroi9x Teleport Tool"] = {
+	["Vynixu's Teleport Tool"] = {
 		"Configs",
 	},
 })
@@ -187,7 +189,7 @@ Library.Items.PlacePoint = Section:AddBind("Place Point", Enum.KeyCode.KeypadPlu
     add(Root.Position)
 end)
 
-Section:AddButton("Hepsini Temizle", clear)
+Section:AddButton("Clear All", clear)
 
 Library.Items.TestMode = Section:AddDropdown("Test Mode", {"Normal", "Reverse"}, {default = "Normal"}, function() end)
 
@@ -243,7 +245,7 @@ task.spawn(function()
     end
 end)
 
-Section:AddButton("Yükle", function()
+Section:AddButton("Load", function()
     local s, config = pcall(function()
         return HS:JSONDecode(readfile(Directory.Configs.. "/".. Library.Items.LoadPoints.Selected))
     end)
@@ -260,18 +262,24 @@ end)
 -- Settings
 
 Section = SettingsTab:AddSection("Credits", {default = true})
-local namehaz = "xHazroi9x"
-Section:AddDualLabel({"Custom UI", namehaz})
+
+Section:AddDualLabel({"Custom UI", SelfModules.Discord.Name})
+
+Section:AddDualLabel({"Scripting", SelfModules.Discord.Name})
+
+Section:AddButton("Join Discord Server", function()
+    SelfModules.Inviter.Join(SelfModules.Discord.Invite)
+end)
 
 Section = SettingsTab:AddSection("Features")
 
-Section:AddToggle("Sonsuz Zıplama", {flag = "PlayerFlyHotkey"}, function() end)
+Section:AddToggle("Double Jump Fly Hotkey", {flag = "PlayerFlyHotkey"}, function() end)
 
 SettingsTab:AddConfigs("Configs")
 
 Section = SettingsTab:AddSection("Extra")
 
-Section:AddBind("UI Tuşu Belirle", Enum.KeyCode.RightControl, {}, function(bind)
+Section:AddBind("Toggle UI Key", Enum.KeyCode.RightControl, {}, function(bind)
     Window:SetKey(bind)
 end)
 
@@ -279,7 +287,7 @@ Section:AddToggle("Rainbow UI", {}, function(bool)
     Window:SetAccent(bool and "rainbow" or WindowColor)
 end)
 
-Section:AddButton("kopyala UI Repository", function()
+Section:AddButton("Copy UI Repository", function()
     setclipboard("https://raw.githubusercontent.com/RegularVynixu/UI-Libraries/main/Vynixius")
 end)
 
