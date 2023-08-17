@@ -1,0 +1,37 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("xHazroi9x", "Midnight")
+
+--ANA MAKİNE
+local Main = Window:NewTab("Oyuncu")
+local Main2 = Window:NewTab("Hacks")
+local Main2Section = Main2:NewSection("HACKS")
+local MainSection = Main:NewSection("OYUNCU HAREKETLERİ")
+
+
+Main2Section:NewButton("Komut Bar", "Admin Komutları menüsünü açar", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+
+end)
+
+Main2Section:NewButton("COMİNG SOON", "", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/4023VXAe'))()
+end)
+
+MainSection:NewButton("Varsayılan Değerlere Çevir", "oyuncunun zıplama ve hız değerini normal değerlere çevirir", function()
+        game.Players.LocalPlayer.Character. Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer. Character. Humanoid. JumpPower = 50
+        hiz = 0
+        zipl = 0
+end)
+
+--hız
+MainSection:NewSlider("HIZ", "oyuncunun hızını arttırır (varsayılan değer: 16)", 500, 0, function(hiz) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = hiz
+end)
+--hız end
+
+--zıpla
+MainSection:NewSlider("ZIPLAMA", "oyuncunun zıplamasını arttırır (varsayılan değer: 50)", 500, 0, function(zipl) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = zipl
+end)
+--zıpla end
