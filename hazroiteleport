@@ -226,7 +226,7 @@ end)
 
 -- Load
 
-Section = Tab:AddSection("Yükle")
+Section = Tab:AddSection("Load")
 
 Library.Items.LoadPoints = Section:AddDropdown("Select Config", {}, {}, function() end)
 task.spawn(function()
@@ -262,14 +262,6 @@ end)
 Section = SettingsTab:AddSection("Credits", {default = true})
 local namehaz = "xHazroi9x"
 Section:AddDualLabel({"Custom UI", namehaz})
-  
--- kullanılmıyor
-  
--- Section:AddDualLabel({"Scripting", SelfModules.Discord.Name})
-
--- Section:AddButton("D", function()
-  -- SelfModules.Inviter.Join(SelfModules.Discord.Invite)
--- end)
 
 Section = SettingsTab:AddSection("Features")
 
