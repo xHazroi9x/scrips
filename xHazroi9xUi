@@ -1,21 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
---themes
-local theme1 = "Midnight"
-local theme2 = "LightTheme"
-local theme3 = "DarkTheme"
-local theme4 = "GrapeTheme"
-local theme5 = "BloodTheme"
-local theme6 = "Ocean"
-local theme7 = "Sentinel"
-local theme8 = "Synapse"
-local theme9 = "Serpent"
 
-
-local Tema = theme1
-
-
-local Window = Library.CreateLib("xHazroi9x", Tema)
+local Window = Library.CreateLib("xHazroi9x", "Midnight")
 
 --ANA MAKİNE
 local Main = Window:NewTab("Oyuncu")
@@ -24,27 +10,6 @@ local Main3 = Window:NewTab("Temalar")
 local Main3Section = Main2:NewSection("TEMA")
 local Main2Section = Main2:NewSection("HACKS")
 local MainSection = Main:NewSection("OYUNCU HAREKETLERİ")
-
-
-for theme, color in pairs(themes) do
-    Section:NewColorPicker(theme, "Change your "..theme, color, function(color3)
-        Library:ChangeColor(theme, color3)
-    end)
-end
-
-
-
-
-
-Main3Section:NewButton("LightTheme", "", function()
-    Tema = theme2
-end)
-
-
-
-
-
-
 
 
 Main2Section:NewButton("Komut Bar", "Admin Komutları menüsünü açar", function()
