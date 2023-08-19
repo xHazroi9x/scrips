@@ -1,5 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("xHazroi9x", "Midnight")
+local theme = "Midnight"
+local Window = Library.CreateLib("xHazroi9x", theme)
 
 --ANA MAKİNE
 local Main = Window:NewTab("Oyuncu")
