@@ -22,6 +22,9 @@ Main2Section:NewButton("Ctrl/Tp", "ctrlye basılı tutup mouse ile tıkla", func
     loadstring(game:HttpGet('https://pastebin.com/raw/kqDc1zuX'))()
 end)
 
+Main2Section:NewButton("jumphack", "ctrlye basılı tutup mouse ile tıkla", function()
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = 500
+end)
 
 MainSection:NewButton("Varsayılan Değerlere Çevir", "oyuncunun zıplama ve hız değerini normal değerlere çevirir", function()
         game.Players.LocalPlayer.Character. Humanoid.WalkSpeed = 16
