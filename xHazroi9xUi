@@ -6,8 +6,8 @@ local Window = Library.CreateLib("xHazroi9x", "Midnight")
 --ANA MAKİNE
 local Main = Window:NewTab("Oyuncu")
 local Main2 = Window:NewTab("Hacks")
-local Main3 = Window:NewTab("Temalar")
-local Main3Section = Main3:NewSection("TEMA")
+local Main4 = Window:NewTab("Temalar")
+local Main4Section = Main4:NewSection("TEMA")
 local Main2Section = Main2:NewSection("HACKS")
 local MainSection = Main:NewSection("OYUNCU HAREKETLERİ")
 
