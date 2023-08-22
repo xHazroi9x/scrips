@@ -51,8 +51,7 @@ local Window = Rayfield:CreateWindow({
     Name = "Toggle Example",
     CurrentValue = false,
     Flag = "Toggle1", 
-    Callback = function(Value)
-    if CurrentValue == true then 
+    Callback = function(Value) 
 
     end,
  })
