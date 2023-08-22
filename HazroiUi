@@ -30,6 +30,9 @@ local Window = Rayfield:CreateWindow({
  local Tab = Window:CreateTab("Oyuncu Hareketleri", 4483362458) -- Title, Image
  local Section = Tab:CreateSection("Oyuncu")
 
+local Tab1 = Window:CreateTab("HACK", 4483362458) -- Title, Image
+local Section1 = Tab1:CreateSection("Hileler")
+
 
  local Button = Tab:CreateButton({
     Name = "Varsayılana Çevir",
@@ -38,6 +41,31 @@ local Window = Rayfield:CreateWindow({
       game.Players.LocalPlayer.Character. Humanoid.JumpPower = 50
     end,
  })
+
+
+local Button = Tab1:CreateButton({
+    Name = "Komut Bar",
+    Callback = function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+ })
+
+
+local Button = Tab1:CreateButton({
+    Name = "Ctrl/Tp",
+    Callback = function()
+     loadstring(game:HttpGet('https://pastebin.com/raw/kqDc1zuX'))()
+    end,
+ })
+
+
+local Button = Tab1:CreateButton({
+    Name = "Oyuncuya Teleport GUİ",
+    Callback = function()
+     loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+    end,
+ })
+
 
  local Toggle = Tab:CreateToggle({
     Name = "Toggle Example",
