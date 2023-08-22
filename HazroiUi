@@ -30,12 +30,10 @@ local Window = Rayfield:CreateWindow({
  local Tab = Window:CreateTab("Oyuncu Hareketleri", 4483362458) -- Title, Image
  local Section = Tab:CreateSection("Oyuncu")
 
- local Tab1 = Window:CreateTab("Tp Hack") -- Title, Image
- local Section1 = Tab1:CreateSection("Teleport Hilesi")
 
 
- local Button1 = Tab1:CreateButton({
-   Name = "Hileyi Etkinleştir",
+ local Button = Tab:CreateButton({
+   Name = "tp hilesini Etkinleştir",
    Callback = function()
       loadstring(game:HttpGet('https://pastebin.com/raw/YNVbeqPy%22'))()
    end,
