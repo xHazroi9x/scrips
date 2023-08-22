@@ -54,7 +54,7 @@ local Button = Tab1:CreateButton({
 local Button = Tab1:CreateButton({
     Name = "Ctrl/Tp",
     Callback = function()
-     loadstring(game:HttpGet('https://pastebin.com/raw/kqDc1zuX'))()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/xHazroi9x/scrips/main/ctrltp'))()
     end,
  })
 
@@ -62,7 +62,7 @@ local Button = Tab1:CreateButton({
 local Button = Tab1:CreateButton({
     Name = "Oyuncuya Teleport GUİ",
     Callback = function()
-     loadstring(game:HttpGet(("https://pastebin.com/raw/YNVbeqPy")))()
+     loadstring(game:HttpGet(('https://raw.githubusercontent.com/xHazroi9x/scrips/main/teleport'))()
     end,
  })
 
