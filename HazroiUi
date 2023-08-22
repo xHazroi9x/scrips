@@ -31,14 +31,6 @@ local Window = Rayfield:CreateWindow({
  local Section = Tab:CreateSection("Oyuncu")
 
 
-
- local Button = Tab:CreateButton({
-   Name = "tp hilesini Etkinleştir",
-   Callback = function()
-      loadstring(game:HttpGet('https://pastebin.com/raw/YNVbeqPy%22'))()
-   end,
-})
-
  local Button = Tab:CreateButton({
     Name = "Varsayılana Çevir",
     Callback = function()
