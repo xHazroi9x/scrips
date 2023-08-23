@@ -45,7 +45,7 @@ local Section1 = Tab1:CreateSection("Hileler")
  local Button = Tab:CreateButton({
     Name = "çıkış",
     Callback = function()
-      window.Exit()
+     Rayfield:Destroy()
     end,
  })
 
