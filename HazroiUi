@@ -42,6 +42,12 @@ local Section1 = Tab1:CreateSection("Hileler")
     end,
  })
 
+ local Button = Tab:CreateButton({
+    Name = "çıkış",
+    Callback = function()
+      window.Exit()
+    end,
+ })
 
 local Button = Tab1:CreateButton({
     Name = "Komut Bar",
